@@ -1,0 +1,168 @@
+
+@import "./font.css";
+@import "./reset.css";
+@import "./common.css";
+
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+    transition: transform .3s, color .5s;
+    will-change: transform, color;
+    transform: translateY(-100%);
+    z-index: 10;
+}
+
+#header.active {
+    transform: translateY(0%);
+}
+
+#header.dark,
+#header.dark .gnb .menu-item .btn-lang {
+    color: var(--color-black);
+}
+
+#header.dark .gnb .logo path {
+    fill: var(--color-black)
+}
+
+#header.dark .gnb .menu-item .btn-lang path {
+    stroke: var(--color-black);
+}
+
+#header .gnb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .gnb .logo {
+    width: 100px;
+    display: flex;
+}
+
+#header .gnb .logo a {
+    padding: 17px 0;
+}
+
+#header .gnb .logo svg {
+    width: 100%;
+}
+
+#header .gnb .logo path {
+    fill: var(--color-white);
+    transition: fill .5s;
+    will-change: fill;
+}
+
+#header .gnb .menu-list {
+    display: flex;
+    align-items: center;
+}
+
+#header .gnb .menu-list .menu-item {
+    display: flex;
+    position: relative;
+}
+
+#header .gnb .menu-list .menu-item a {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 23px 25px;
+    will-change: color;
+}
+
+#header .gnb .menu-item .btn-lang {
+    padding: 20px 0 18px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-white);
+    transition: color .5s;
+    will-change: color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#header .gnb .menu-item .btn-lang path {
+    transition: stroke .5s;
+    will-change: stroke;
+}
+
+#header .gnb .menu-item .lang-list {
+    position: absolute;
+    right: 0;
+    top: 53px;
+    text-align: center;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-gray);
+    color: var(--color-white);
+    border-radius: 6px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#header .gnb .menu-item .lang-list.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#header .gnb .menu-item .lang-list.white {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+#header .gnb .menu-item .lang-list-item a {
+    display: block;
+    padding: 2px 14px 4px 13px;
+    opacity: .2;
+}
+
+#header .gnb .menu-item .lang-list-item.active a {
+    opacity: 1;
+}
+
+#header .gnb .menu-item .lang-list-item:first-child a {
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+#footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+#footer .inner {
+    padding: 58px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .addr-area p {
+    font-weight: 400;
+    line-height: 1;
+}
+
+#footer .addr-area small {
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+#footer .logo-area img {
+    width: 193px;
+}
